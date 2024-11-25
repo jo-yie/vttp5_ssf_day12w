@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Form Success</title>
+</head>
+<body>
+    <h1>Your list of <strong th:text="${userForm.userInput}"></strong> random numbers</h1>
+
+    <table> 
+        <tbody>
+            <tr th:each="num : ${selectedNums}">
+                <td th:text="${num}"></td>
+            </tr>
+            <tr th:each="str : ${selectedFilePaths}">
+                <img th:src="@{${str}}">
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
